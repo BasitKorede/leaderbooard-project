@@ -1,44 +1,38 @@
 <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./src/style.css" />
-        <title>LEADERBOARD</title>
-      </head>
-    
-      <body>
-          <h1>Leaderboard</h1>
-          <div class="container display-flex">
-       <section class="recent-section">
-         <div class="display-flex recent-score-div">
-         <h2 class="recent-header">Recent score</h2>
-         <button type="submit" class="refresh-button">refresh</button>
-         </div>
-        <ul class="board-list">
-          <li class="board-list-item">name: 100</li>
-          <li class="board-list-item">name: 100</li>
-          <li class="board-list-item">name: 100</li>
-          <li class="board-list-item">name: 100</li>
-          <li class="board-list-item">name: 100</li>
-          <li class="board-list-item">name: 100</li>
-        </ul>
-        </section>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>LEADERBOARD</title>
+  </head>
 
+  <body>
+    <h1>Leaderboard</h1>
+    <div class="container display-flex">
+      <section class="recent-section">
+        <div class="display-flex recent-score-div">
+          <h2 class="recent-header">Recent score</h2>
+          <button type="submit" class="refresh-button">refresh</button>
+        </div>
+        <ul class="board-list"></ul>
+      </section>
 
-        <section class="add-section">
-          <h2>Add your score</h2>
-        <form id="book-form" class="form" >
-          <br><br>
-          <input type="text" class="name-input" placeholder="Name">
-          <br><br>
-          <input type="number" class="score-input" placeholder="Score">
-          <br><br>
+      <section class="add-section">
+        <h2>Add your score</h2>
+        <form id="form" class="form">
+          <input type="text" class="name-input" placeholder="Name" id="name" />
+          <input
+            type="number"
+            class="score-input"
+            placeholder="Score"
+            id="score"
+          />
           <button type="submit" class="add-button">submit</button>
         </form>
-        </section>
-        </div>
-        <script src="index.js"></script>
-      </body>
-    </html>
+      </section>
+    </div>
+    <script type="module" src="../src/index.js"></script>
+  </body>
+</html>

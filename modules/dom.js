@@ -1,28 +1,21 @@
-export const displayLeadBoard = ({ name, score, id }, parentElement) => {
-  const bookListItemElement = document.createElement('li');
-  bookListItemElement.className = 'book-list-item';
-  bookListItemElement.innerHTML = `
-          <section>
-            <h3>${name}</h3>
-            <p>${score}</p>
-            <button id="${id}" type="button" onclick="handleRemove('${id}')" class="remove-button">Remove</button>
-            </section>`;
-  parentElement.appendChild(bookListItemElement);
+const API_KEY = 's5I1Iezs2fp5U1vv55v4';
+export const URI = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${API_KEY}/scores`;
+
+
+export const displayScores = (list, res) => {
+  const { result } = undefined;
+  const scores = [];
+  for (let i = 0; i < result.length; i += 1) {
+    scores.push([result[i].user, result[i].score]);
+  }
+  list.innerHTML = '';
+  scores.forEach((score) => {
+    list.innerHTML += `<li>${score[0]}: ${score[1]}</li>`;
+  });
+  if (scores.length > 5) { list.classList.add('scroll'); }
 };
 
-const generateId = () => `id_${Math.random().toString(36).slice(2)}`;
-
-export const initialBooks = [
-  {
-    name: 'basit',
-    score: '100',
-    id: generateId(),
-  },
-
-  {
-    name: 'basit',
-    score: '100',
-    id: generateId(),
-  },
-
-];
+const refresh = document.querySelector('.refresh-button');
+refresh.addEventListener('click', () => {
+  fetchData();
+});

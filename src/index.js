@@ -1,12 +1,20 @@
-import store from '../modules/localStorage.js';
-import displayLeadBoard, { initialBooks } from '../modules/dom.js';
+// eslint-disable-next-line no-unused-vars
+import { URI, displayScores } from '../modules/dom.js';
+import { sendData, postData } from '../modules/refresh.js';
 
-import './style.css';
+displayScores();
+postData();
+const resultUl = document.querySelector('.board-list');
 
-const bookListElement = document.querySelector('ul.book-list');
+const fetchData = async () => {
+  await fetch(URI, {
+    method: 'GET',
+  })
+    .then((response) => response.json())
+    .then((result) => displayScores(resultUl, result));
+};
 
-const bookStore = store(initialBooks);
-const books = bookStore.all();
-books.forEach((book) => {
-  displayLeadBoard(book, bookListElement);
+document.addEventListener('DOMContentLoaded', () => {
+  sendData();
+  fetchData();
 });
