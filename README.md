@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Hello Microverse
+#LEADERBOARD APP
 
-> A basic hello microverse project to test our knowledege on the use of linters.
+> A basic leaderboard app that teaches student how to use apis
 
 ## Built With
 
