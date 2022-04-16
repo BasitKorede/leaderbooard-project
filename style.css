@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 27px;
+  text-align: center;
+}
+
+.recent-score-div {
+  margin: 32px;
+}
+
+.recent-header {
+  margin: 0 32px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent-section {
+  margin: 0 40px;
+  width: 100%;
+}
+
+.add-section {
+  margin: 0 24px;
+  width: 100%;
+}
+
+.board-list {
+  padding: 0;
+  width: 100%;
+  height: 274px;
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+
+.board-list-item {
+  list-style: none;
+  background-color: darkgray;
+  padding: 8px 12px;
+}
+
+.style-input {
+  flex-direction: column;
+}
+
+.board-list-item:nth-child(2n) {
+  background-color: #fff;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+button {
+  cursor: pointer;
+  border: 2px solid;
+  box-shadow: 2px 2px 2px 2px #000;
+  width: 20%;
+  padding: 6px;
+}
+
+.refresh-button {
+  margin: 4px;
+}
+
+.add-button {
+  position: relative;
+  left: 75px;
+}
+
+.form {
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  margin: auto;
+}
+
+.form input {
+  width: 60%;
+  padding: 8px;
+  outline: auto;
+  margin-bottom: 8px;
+}
